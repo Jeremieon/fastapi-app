@@ -4,7 +4,7 @@ variable "region" {
   #default     = "eu-west-1"
 }
 variable "ami_id" {
-  description = "The AMI-ID for EC2 Instances"
+  description = "The AMI ID for EC2 Instances"
   type        = string
 }
 
@@ -17,6 +17,7 @@ variable "instance_type" {
 variable "my_ip" {
   description = "Your public IP address"
   #default     = "91.130.2.122"
+  #no at all
   type = string
 }
 
