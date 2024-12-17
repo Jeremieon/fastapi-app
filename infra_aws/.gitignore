@@ -11,7 +11,7 @@ override.tf.json
 *_override.tf.json
 
 # Variable files that may contain sensitive data
-*.tfvars
+#*.tfvars
 *.tfvars.json
 
 # Crash logs
