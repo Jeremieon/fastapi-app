@@ -5,6 +5,9 @@ on:
     branches:
       - main
 
+env:
+  SSH_PUBLIC_KEY: ${{ secrets.SSH_PUBLIC_KEY }}
+
 jobs:
   deploy:
     runs-on: ubuntu-latest

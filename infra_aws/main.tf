@@ -100,7 +100,7 @@ resource "aws_security_group" "my_app_sg" {
 
 resource "aws_key_pair" "my_app_key" {
   key_name   = "fastapiapp-key"
-  public_key = var.SSH_PUBLIC_KEY
+  public_key = var.ssh_public_key
 }
 
 resource "aws_instance" "myEc2-instance" {
