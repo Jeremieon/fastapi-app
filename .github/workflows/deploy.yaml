@@ -46,7 +46,6 @@ jobs:
 
       - name: Terraform Init
         run: terraform init
-        #sample run
 
       - name: Terraform Plan
         run: terraform plan -lock=false
