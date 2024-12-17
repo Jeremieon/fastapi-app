@@ -11,6 +11,7 @@ variable "ami" {
 variable "instance_type" {
   description = "Ec2 instance type"
   default     = "t2.micro"
+  type        = string
 }
 
 variable "my_ip" {
@@ -26,7 +27,7 @@ variable "my_ip" {
 variable "SSH_PUBLIC_KEY" {
   description = "The public SSH key for accessing instances"
   type        = string
-  sensitive   = true  
+  sensitive   = true
 }
 
 variable "instance_name" {
