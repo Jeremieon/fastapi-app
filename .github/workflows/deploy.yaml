@@ -24,14 +24,14 @@ jobs:
 
       - name: Terraform Cloud Login
         run: |
-          echo "TFE_TOKEN=${{ secrets.TF_API_TOKEN }}" > ~/.terraform.d/credentials.tfrc.json
+          echo ${{ secrets.TF_API_TOKEN }} | terraform login
 
-      # Step 4: Set environment variables from Terraform Cloud variable set (optional)
-      - name: Retrieve variables from Terraform Cloud
+      # Fetch all environment variables from Terraform Cloud workspace
+      - name: Fetch Variables from Terraform Cloud
         run: |
-          curl --header "Authorization: Bearer $TFE_TOKEN" \
-          "https://app.terraform.io/api/v2/organizations/${{ secrets.TF_CLOUD_ORGANIZATION }}/workspaces/${{ secrets.TF_CLOUD_WORKSPACE_AUTO_WORKSPACE }}/vars" \
-          -o tf-vars.json
+          # Replace with your organization and workspace name
+          terraform workspace select fastapi-app || terraform workspace new fastapi-app
+          terraform output
 
       - name: Setup Terraform Backend
         id: backend
