@@ -22,10 +22,6 @@ jobs:
           terraform_version: 1.10.2
           cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
 
-      - name: Terraform Cloud Login
-        run: |
-          echo ${{ secrets.TF_API_TOKEN }} | terraform login
-
       # Fetch all environment variables from Terraform Cloud workspace
       - name: Fetch Variables from Terraform Cloud
         run: |
