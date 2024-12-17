@@ -1,4 +1,4 @@
-variable "region" {
+variable "aws-region" {
   description = "aws Region"
   type        = string
   #default     = "eu-west-1"

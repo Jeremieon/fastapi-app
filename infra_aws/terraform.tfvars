@@ -1,4 +1,4 @@
-region        = "eu-west-1"
+aws-region        = "eu-west-1"
 ami_id        = "ami-0776c814353b4814d"
 instance_type = "t2.micro"
 my_ip         = "91.130.2.122"
