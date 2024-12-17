@@ -3,7 +3,7 @@ variable "region" {
   type        = string
   #default     = "eu-west-1"
 }
-variable "ami" {
+variable "ami_id" {
   description = "The AMI-ID for EC2 Instances"
   type        = string
 }
