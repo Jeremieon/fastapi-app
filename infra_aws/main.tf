@@ -57,7 +57,7 @@ resource "aws_security_group" "my_app_sg" {
     protocol    = "tcp"
     cidr_blocks = ["${var.my_ip}/32"]
   }
-
+  #ingressing
   ingress {
     from_port   = 80
     to_port     = 80
