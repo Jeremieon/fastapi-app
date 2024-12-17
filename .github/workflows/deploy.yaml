@@ -53,8 +53,8 @@ jobs:
 
       - name: Terraform Apply
         if: github.event_name == 'push' && contains(github.event.head_commit.message, 'deploy')
-        run: terraform apply -auto-approve
+        run: terraform apply -auto-approve -lock=false
 
       - name: Terraform Destroy
         if: github.event_name == 'push' && contains(github.event.head_commit.message, 'destroy')
-        run: terraform destroy -auto-approve
+        run: terraform destroy -auto-approve -lock=false
